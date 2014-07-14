@@ -1,5 +1,5 @@
 Puppet::Type.newtype(:monit) do
-  #ensurable
+  ensurable
   @doc = "Monitor packages through Monit"
     newparam(:name) do
       desc "The name of the  package monitored under monit"

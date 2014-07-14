@@ -19,7 +19,7 @@ Puppet::Type.type(:monit).provide(:monit) do
 
   def create_monit_file
     File.open("/etc/monit.d/#{resource[:name]}.monit.conf", "w"){ |f|
-      f.write("check process httpd with pidfile /var/run/httpd/httpd.pid\n    start program = \"/etc/init.d/httpd start\" with timeout 60 seconds\n     stop program  = \"/etc/init.d/httpd stop\""
+      f.write("check process #{resource[:name]} with pidfile #{resource[:pid_name]}\n    start program = \"/etc/init.d/#{resource[:name]} start\" with timeout #{resource[:process_timeout]} seconds\n     stop program  = \"/etc/init.d/#{resource[:name]} stop\""
       )}
       monit('reload')
       status = ""
