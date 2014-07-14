@@ -1,0 +1,13 @@
+{
+  "name": "chmjs-monit",
+  "version": "0.1.0",
+  "author": "MJStein",
+  "summary": "Puppet module to allow easy monit monitoring",
+  "license": "Apache 2.0",
+  "source": "https://github.com/mjstein/chmjs-monit",
+  "project_page": "https://github.com/mjstein/chmjs-monit",
+  "issues_url": "https://github.com/mjstein/chmjs-monit/issues",
+  "dependencies": [
+  ]
+}
+
